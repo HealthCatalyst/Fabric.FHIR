@@ -15,6 +15,7 @@ namespace Fabric.FHIR
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
+                .UseUrls("http://*:5005")
                 .UseApplicationInsights()
                 .Build();
 
