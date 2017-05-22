@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  fabric.fhir:
+    image: fabric.fhir
+    build:
+      context: ./Fabric.FHIR
+      dockerfile: Dockerfile
