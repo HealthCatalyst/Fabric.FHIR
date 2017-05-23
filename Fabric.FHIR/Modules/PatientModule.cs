@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Fabric.FHIR.Reader;
 using Nancy;
 
 namespace Fabric.FHIR.Modules
@@ -12,7 +13,8 @@ namespace Fabric.FHIR.Modules
         {
             Get("/Patient/{id}", parameters =>
             {
-                return $"I am a Patient: {parameters.id}";
+                return new FhirReader().ReadPatient(parameters.id);
+                //return $"I am a Patient: {parameters.id}";
             });
         }
     }

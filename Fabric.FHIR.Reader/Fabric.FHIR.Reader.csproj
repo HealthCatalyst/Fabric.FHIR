@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NEST" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Fabric.Databus\Fabric.FHIR.DataModels\Fabric.FHIR.DataModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>..\..\..\..\Users\imran.qureshi\.nuget\packages\system.xml.xmlserializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
