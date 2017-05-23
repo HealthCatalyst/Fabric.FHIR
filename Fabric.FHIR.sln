@@ -9,7 +9,7 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fabric.FHIR.Reader", "Fabric.FHIR.Reader\Fabric.FHIR.Reader.csproj", "{EA940C35-FE6D-441C-9D71-3AC5E77FC111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fabric.FHIR.DataModels", "..\Fabric.Databus\Fabric.FHIR.DataModels\Fabric.FHIR.DataModels.csproj", "{285F8B04-9380-4951-8380-945ECE41F0CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fabric.FHIR.DataModels", "Fabric.FHIR.DataModels\Fabric.FHIR.DataModels.csproj", "{285F8B04-9380-4951-8380-945ECE41F0CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
