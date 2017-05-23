@@ -12,13 +12,7 @@ namespace Fabric.FHIR.Reader
     {
         public string ReadPatient(string id)
         {
-            var settings = new ConnectionSettings(new Uri("http://localhost:9200"))
-                .DefaultIndex("patients")
-                .ThrowExceptions()
-                .DisableDirectStreaming()
-                .OnRequestCompleted(LogRequest);
-
-            var client = new ElasticClient(settings);
+            var client = GetElasticClient();
 
             //var result = client.Search<Patient>(s => s
             //    .Query(q => q
@@ -32,9 +26,35 @@ namespace Fabric.FHIR.Reader
             return result.ToJson();
         }
 
+        private ElasticClient GetElasticClient()
+        {
+            var settings = new ConnectionSettings(new Uri("http://localhost:9200"))
+                .DefaultIndex("patients")
+                .ThrowExceptions()
+                .DisableDirectStreaming()
+                .OnRequestCompleted(LogRequest);
+
+            var client = new ElasticClient(settings);
+            return client;
+        }
+
         private void LogRequest(IApiCallDetails obj)
         {
             var objDebugInformation = obj.DebugInformation;
+        }
+
+        public string RunAnalytics(string body)
+        {
+            var client = GetElasticClient();
+   //         var result = client.LowLevel.Search<string>("patients", "patient", @"{
+   //""query"": {
+   //         ""match_all"": { }
+   //     }
+   // }");
+            var result = client.LowLevel.Search<string>("patients", "patient",body);
+
+            return result.Body;
+
         }
     }
 }

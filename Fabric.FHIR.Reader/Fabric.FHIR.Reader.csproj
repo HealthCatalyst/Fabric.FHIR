@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Fabric.Databus\Fabric.FHIR.DataModels\Fabric.FHIR.DataModels.csproj" />
+    <ProjectReference Include="..\Fabric.FHIR.DataModels\Fabric.FHIR.DataModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
